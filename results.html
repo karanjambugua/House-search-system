@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="results.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/new_logo.png" alt="Modern Home">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="our_projects.html">Projects</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="auth.html">Login</a></li>
+                <li class="contact-number">📞 (+254) 792 530 210</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Title -->
+    <section class="search-header">
+        <h1>Search Results</h1>
+        <p>Find the best properties based on your search.</p>
+    </section>
+
+    <!-- Refine Search -->
+    <section class="search-box">
+        <h2>Refine Your Search</h2>
+        <input type="text" id="search-input" placeholder="Enter location, property type, or budget...">
+        <button onclick="refineSearch()">Search</button>
+    </section>
+
+    <!-- Display Search Query -->
+    <section id="search-query"></section>
+
+    <!-- Results Container -->
+    <section class="results-container" id="video-results">
+        <!-- Videos will be dynamically injected here -->
+    </section>
+    <div id="tourModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeTourModal()">&times;</span>
+            <h2>Book a House Tour</h2>
+            <form id="tourForm" onsubmit="bookTour(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="area">Area of Interest:</label>
+                <input type="text" id="area" name="area" required>
+
+                <label for="amount">Booking Fee (KES):</label>
+                <input type="number" id="amount" value="100" disabled>
+
+                <button type="submit">Pay 100 KES & Book Tour</button>
+            </form>
+        </div>
+    </div>
+    <!-- Link JS -->
+    <script src="results.js"></script>
+
+</body>
+</html>

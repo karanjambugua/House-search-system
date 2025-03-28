@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Video</title>
+  <link rel="stylesheet" href="upload.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Upload a New Video</h1>
+    <form id="upload-form" enctype="multipart/form-data">
+      <label for="name">Video Name</label>
+      <input type="text" id="name" name="name" placeholder="e.g. 1 Bedroom" required />
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="e.g. Thika" required />
+
+      <label for="price">Price</label>
+      <input type="number" id="price" name="price" placeholder="e.g. 15000" required />
+
+      <label for="video-file">Upload Video</label>
+      <div class="drag-area" id="drag-area">
+        <p>Drag and drop a .mp4 video here or click to select</p>
+        <input type="file" id="video-file" name="video" accept="video/mp4" required />
+      </div>
+
+      <video id="video-preview" controls style="display: none;"></video>
+
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+
+  <script src="upload.js"></script>
+</body>
+</html>

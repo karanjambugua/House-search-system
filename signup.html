@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | House Search System</title>
+    <link rel="stylesheet" href="auth.css">
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="signup.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-box">
+            <h2>Sign Up</h2>
+
+            <input type="text" id="first-name" placeholder="First Name" required>
+            <input type="text" id="last-name" placeholder="Last Name" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            
+            <div class="password-container">
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <span id="toggle-password" style="cursor: pointer;">👁</span>
+            </div>
+            <div class="password-container">
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                <span id="toggle-confirm-password" style="cursor: pointer;">👁</span>
+            </div>
+
+            <button id="signup-button">Sign Up</button>
+            <p id="error-message"></p>
+
+            <p class="switch-text">
+                Already have an account? <a href="auth.html">Login</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

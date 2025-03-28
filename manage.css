@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+  
+  /* Top Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Navbar Links */
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .navbar a:hover {
+    color: #0074e4;
+  }
+  
+  /* Zillow Logo */
+  .logo img {
+    height: 28px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  
+  /* Dropdown Container */
+  .dropdown {
+    position: relative;
+  }
+  
+  /* Dropdown Button */
+  .dropdown-button {
+    color: #0074e4;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 12px;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 260px;
+    z-index: 1000;
+    padding: 15px 0;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  
+  /* Show Dropdown on Hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Dropdown Links */
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #0074e4;
+    font-size: 14px;
+  }
+  
+  /* Hover Effect */
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Section Title */
+  .section-title {
+    padding: 0 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  /* Divider */
+  .dropdown-menu hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #eee;
+  }
+  

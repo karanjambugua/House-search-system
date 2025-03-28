@@ -1,0 +1,229 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0d2436;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust as needed */
+    background: url('images/wallpaper.jpg') no-repeat center center/cover;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.hero-content {
+    color: white;
+}
+
+.subheading {
+    font-size: 14px;
+}
+
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Service Cards Container */
+.service-cards {
+    display: flex;
+    flex-wrap: nowrap; /* Ensures horizontal layout */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Aligns vertically */
+    gap: 20px; /* Adds spacing between cards */
+    max-width: 1200px;
+    margin: auto; /* Centers container */
+    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+    white-space: nowrap; /* Prevents wrapping */
+    padding: 20px;
+}
+
+/* Individual Service Card (now an <a> link) */
+.service-card {
+    display: flex;
+    flex-direction: column; /* Keeps content stacked */
+    align-items: center;
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    flex-shrink: 0; /* Prevents resizing */
+    text-decoration: none; /* Removes default underline for <a> */
+    color: inherit; /* Ensures text stays the same color */
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Service Icons */
+.service-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.service-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Text Styling */
+.service-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.service-card p {
+    color: #777;
+    font-size: 14px;
+}
+/* Last section*/
+.footer-container {
+    background-color: #1a1d29;
+    color: white;
+    padding: 40px 20px;
+}
+.top-banner {
+    background-color: #28a745;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.top-banner p {
+    font-size: 16px;
+    font-weight: normal;
+}
+.contact-btn {
+    display: inline-block;
+    background: white;
+    color: #28a745;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+}
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.footer-column h3 {
+    margin-bottom: 20px;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+.footer-column ul li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.footer-column ul li a:hover {
+    color: #f59e0b;
+}
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.newsletter p {
+    margin-bottom: 10px;
+}
+.newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    margin-bottom: 10px;
+}
+.newsletter button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        width: 100%;
+    }
+    .newsletter input {
+        width: 100%;
+    }
+}

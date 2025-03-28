@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Property Management</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script type="module" src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🏡 RealEstatePro</div>
+        <nav>
+            <ul>
+                <li><a href="sell.html">sell</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="upload.html">Sell</a></li>
+                <li class="dropdown">
+                  <span class="dropdown-button">Manage Rentals</span>
+                  
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu">
+                      <div class="section-title">Rental Management Tools</div>
+                      <a href="upload.html">List a rental</a>
+                      <a href="listings.html">My Listings</a>
+                      <a href="messages.html">Messages</a>
+                      <a href="applications.html">Applications</a>
+                      <a href="leases.html">Leases</a>
+                      <a href="payments.html">Payments</a>
+              
+                      <hr>
+              
+                    
+                  </div>
+              
+                </li>
+        
+                <li><a href="#" id="profile-button">Profile</a></li>
+                <li><button id="logout-button">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard-intro">
+            <h1>Welcome, <span id="user-name">User</span></h1>
+            <p>Manage your properties, track inquiries, and optimize your listings.</p>
+        </section>
+
+        <section class="dashboard-categories">
+            <div class="category-card">
+                <img src="images/broker.jpg" alt="Agent">
+                <h3>I'm an agent or broker</h3>
+                <button>Get started</button>
+            </div>
+            <div class="category-card">
+                <img src="images/property manager.jpeg" alt="Property Manager">
+                <h3>I'm a property manager</h3>
+                <button>Get started</button>
+            </div>
+            <div class="category-card">
+                <img src="images/landlord-tenant.jpg" alt="Landlord">
+                <h3>I'm a landlord</h3>
+                <button>Get started</button>
+            </div>
+            <div class="category-card">
+                <img src="images/loanofficer .jpg" alt="Lender">
+                <h3>I'm a lender or loan officer</h3>
+                <button>Get started</button>
+            </div>
+            <div class="category-card">
+                <img src="images/builder.jpeg" alt="Builder">
+                <h3>I'm a builder</h3>
+                <button>Get started</button>
+            </div>
+            <div class="category-card">
+                <img src="images/advisor.jpg" alt="Advertiser">
+                <h3>I am a brand or local advertiser</h3>
+                <button>Get started</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Profile Modal -->
+   
+<div id="profile-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="modal-title">Personal Info</h2>
+  
+      <div class="profile-section">
+        <label for="profile-name"><strong>Name</strong></label>
+        <p id="profile-name">N/A <a href="#" class="edit-link">Edit</a></p>
+      </div>
+  
+      <div class="profile-section">
+        <label for="screen-name"><strong>Screen Name</strong></label>
+        <p id="screen-name">N/A <a href="#" class="edit-link">Edit</a></p>
+      </div>
+  
+      <div class="profile-section">
+        <label for="profile-pic"><strong>Photo</strong></label>
+        <p>
+          <img id="profile-pic-preview" src="default-profile.png" alt="Profile Picture" width="60" height="60" />
+          <a href="#" class="edit-link">Edit</a>
+        </p>
+      </div>
+  
+      <div class="profile-section">
+        <label><strong>Reviews</strong></label>
+        <p>Manage the reviews you’ve written for professionals, rentals, and more. <a href="#" class="edit-link">Manage</a></p>
+      </div>
+  
+      <h2 class="modal-title">Sign in & Security</h2>
+  
+      <div class="profile-section">
+        <label for="email"><strong>Email</strong></label>
+        <p id="email">Not Available <span class="email-status">unverified</span> 
+          <a href="#" class="verify-link">Verify</a> 
+          <a href="#" class="edit-link">Edit</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Signup Form Modal -->
+    <div id="signup-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form id="signup-form" action="https://formspree.io/f/xzzerpeq" method="POST">
+            <h2 id="form-title">Get Started</h2>
+      
+            <input type="text" name="name" id="name" placeholder="Full Name" required>
+            <input type="email" name="email" id="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+            <textarea name="description" id="description" placeholder="Tell us about yourself" required></textarea>
+            <input type="hidden" name="category" id="category">
+      
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+</body>
+</html>

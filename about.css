@@ -1,0 +1,243 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0d2436;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust as needed */
+    background: url('images/About\ us1.jpg') no-repeat center center/cover;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.hero-content {
+    color: white;
+}
+
+.subheading {
+    font-size: 14px;
+}
+
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+}
+.agency-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .agency-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+        .agency-content h2 {
+            font-size: 32px;
+            color: #1a202c;
+            margin-bottom: 10px;
+        }
+        .agency-content p {
+            font-size: 16px;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .agency-content a {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .agency-image {
+            flex: 1;
+        }
+        .agency-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .agency-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .agency-content {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        .advertise-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #0f172a;
+            color: white;
+            border-radius: 10px;
+        }
+        .advertise-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+        .advertise-content h2 {
+            font-size: 32px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .advertise-content p {
+            font-size: 16px;
+            color: #e2e8f0;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .advertise-content a {
+            display: inline-block;
+            background: #f59e0b;
+            color: #1a202c;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .advertise-image {
+            flex: 1;
+        }
+        .advertise-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .advertise-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .advertise-content {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        .footer-container {
+            background-color: #1a1d29;
+            color: white;
+            padding: 40px 20px;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 20px;
+        }
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+        .footer-column h3 {
+            margin-bottom: 20px;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-column ul li a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .footer-column ul li a:hover {
+            color: #f59e0b;
+        }
+        .newsletter {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .newsletter p {
+            margin-bottom: 10px;
+        }
+        .newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 70%;
+            margin-bottom: 10px;
+        }
+        .newsletter button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-column {
+                width: 100%;
+            }
+            .newsletter input {
+                width: 100%;
+            }
+        }
