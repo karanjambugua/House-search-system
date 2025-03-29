@@ -61,6 +61,7 @@ function displayResults() {
                         <source src="${video.src}" type="video/mp4">
                     </video>
                     <p>${video.title}</p>
+                    <button class="request-tour-btn" onclick="openBookingModal(this)">Book a House Tour</button>
                 </div>
             `;
         });
@@ -89,6 +90,7 @@ function refineSearch() {
                         <source src="${video.src}" type="video/mp4">
                     </video>
                     <p>${video.title}</p>
+                    <button class="request-tour-btn" onclick="openBookingModal('${video.title}')">Book a House Tour</button>
                 </div>
             `;
         });
@@ -99,3 +101,109 @@ function refineSearch() {
 
 // Ensure the function runs when the page loads
 window.onload = displayResults;
+// Open the Tour Modal
+function openTourModal(propertyName) {
+    const modal = document.getElementById("tour-modal");
+    const propertyInput = document.getElementById("property");
+    const tourTitle = document.getElementById("tour-title");
+
+    propertyInput.value = propertyName;
+    tourTitle.textContent = `Book a Tour for ${propertyName}`;
+    modal.style.display = "block";
+}
+
+// Close the Tour Modal
+function closeTourModal() {
+    const modal = document.getElementById("tour-modal");
+    modal.style.display = "none";
+}
+
+// Close Modal if Clicking Outside
+window.onclick = function (event) {
+    const modal = document.getElementById("tour-modal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+// Add 'Book a House Tour' button only inside video containers
+function addBookingButtons() {
+    const videoCards = document.querySelectorAll('.video-card'); // Target correct video containers
+    videoCards.forEach(card => {
+        // Avoid adding duplicate buttons
+        if (!card.querySelector('.request-tour-btn')) {
+            const button = document.createElement('button');
+            button.className = 'request-tour-btn';
+            button.innerText = 'Book a House Tour';
+            button.onclick = () => openBookingModal(card);
+            card.appendChild(button);
+        }
+    });
+}
+// Open the modal and populate tour details dynamically
+function openBookingModal(propertyName) {
+    document.getElementById("property-name").value = propertyName;
+    document.getElementById("booking-modal").style.display = "block";
+}
+
+
+// Handle Form Submission with Daraja Integration
+document.getElementById("booking-form").addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent form from reloading
+
+    const formData = new FormData(this);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const phone = formData.get("phone");
+    const property = formData.get("property-name");
+
+    // ================================
+    // ✅ Send Form Data to Formspree (Email Notification)
+    // ================================
+    const emailResponse = await fetch("https://formspree.io/f/xzzerpeq", {
+        method: "POST",
+        body: formData,
+        headers: {
+            "Accept": "application/json"
+        }
+    });
+
+    if (emailResponse.ok) {
+        console.log("✅ Form details sent to email successfully!");
+    } else {
+        alert("❌ Error sending form details. Please try again.");
+        return;
+    }
+
+    // ================================
+    // ✅ Process Daraja Payment for KES 100 via PHP on Heroku
+    // ================================
+    const paymentResponse = await fetch("https://caretaker.herokuapp.com/stk_initiate.php", {
+        method: "POST",
+        body: formData,
+    });
+
+    const result = await paymentResponse.json();
+    if (result.ResponseCode === "0") {
+        alert(`✅ Tour booked successfully for ${property}. We will get back to you shortly.`);
+        closeBookingModal(); // Close modal after successful submission
+    } else {
+        alert("❌ Payment failed. Please try again.");
+    }
+});
+
+// ================================
+// ✅ Close Booking Modal Function
+// ================================
+function closeBookingModal() {
+    document.getElementById("booking-modal").style.display = "none";
+}
+
+// ================================
+// ✅ Close Modal When Clicking Outside
+// ================================
+window.onclick = function (event) {
+    const modal = document.getElementById("booking-modal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};

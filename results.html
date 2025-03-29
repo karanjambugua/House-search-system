@@ -44,32 +44,51 @@
 
     <!-- Results Container -->
     <section class="results-container" id="video-results">
-        <!-- Videos will be dynamically injected here -->
+        <!-- Modal for Booking a House Tour -->
+        <section class="results-container" id="video-results">
+            <div id="booking-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close" onclick="closeBookingModal()">&times;</span>
+                    <form id="booking-form" method="POST" action="https://caretaker.herokuapp.com/stk_initiate.php">
+                        <h2>Request a House Tour</h2>
+                        <input type="hidden" id="property-name" name="property-name">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number (2547XXXXXXXX)" required>
+                        <textarea id="description" name="description" placeholder="Preferred Property/Area"></textarea>
+                        <button type="submit">Book Tour & Pay KES 100</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    
+        <!-- Videos dynamically injected here -->
     </section>
-    <div id="tourModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeTourModal()">&times;</span>
-            <h2>Book a House Tour</h2>
-            <form id="tourForm" onsubmit="bookTour(event)">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="area">Area of Interest:</label>
-                <input type="text" id="area" name="area" required>
-
-                <label for="amount">Booking Fee (KES):</label>
-                <input type="number" id="amount" value="100" disabled>
-
-                <button type="submit">Pay 100 KES & Book Tour</button>
-            </form>
+    <!-- Modal for Booking a Tour -->
+    <section class="results-container" id="video-results">
+        <div id="booking-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeBookingModal()">&times;</span>
+                <form id="booking-form" method="POST" action="https://caretaker.herokuapp.com/stk_initiate.php">
+                    <h2>Request a House Tour</h2>
+                    <input type="hidden" id="property-name" name="property-name">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number (2547XXXXXXXX)" required>
+                    <textarea id="description" name="description" placeholder="Preferred Property/Area"></textarea>
+                    <button type="submit">Book Tour & Pay KES 100</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
+    
+
+    
+    <!-- Video Card Example (Repeat for each video dynamically) -->
+
+<!-- Modal for Booking a Tour -->
+
     <!-- Link JS -->
     <script src="results.js"></script>
 
