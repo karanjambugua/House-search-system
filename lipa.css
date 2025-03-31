@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+body {
+    background-color: #f8f9fa;
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/listed3.jpg");
+    background-size: cover; /* Optional: Ensures the image covers the entire background */
+    background-position: center; /* Optional: Centers the image */
+    background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
+  }
+
+/* Navbar Styling */
+.navbar {
+  background-color: #4caf50;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: bold;
+}
+
+.container {
+  padding-top: 50px;
+}
+
+/* Card Styling */
+.card {
+  width: 100%;
+  max-width: 450px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Form Input Fields */
+.form-control {
+  border-radius: 10px;
+  padding: 12px;
+}
+
+/* Button Styling */
+.btn-success {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+/* Media Image Styling */
+img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+/* Form Header */
+.media-body h6 {
+  color: #4caf50;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Form Container */
+.form-container {
+  margin-top: 20px;
+}

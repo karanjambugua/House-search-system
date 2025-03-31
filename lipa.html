@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Lipa na Mpesa</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="lipa.css" />
+  </head>
+
+  <body>
+    <!-- Navbar with Home Link -->
+    <nav class="navbar navbar-expand-lg navbar-dark mb-4">
+      <a class="navbar-brand" href="index.html">🏡 Home</a>
+    </nav>
+
+    <div class="container d-flex justify-content-center">
+      <div class="card">
+        <div class="text-center mb-4">
+          <h5 class="text-success">Lipa na Mpesa</h5>
+        </div>
+
+        <img src="images/listed3.jpg" alt="Property Image" />
+
+        <div class="media-body mt-4">
+          <h6>Enter Amount & Phone Number</h6>
+        </div>
+
+        <!-- Payment Form -->
+        <form
+          action="stk_initiate.php"
+          method="POST"
+          class="form-container mt-3"
+        >
+          <!-- Amount Input -->
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input
+              type="text"
+              class="form-control"
+              name="amount"
+              placeholder="Enter Amount"
+              required
+            />
+          </div>
+
+          <!-- Phone Number Input -->
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              class="form-control"
+              name="phone"
+              placeholder="Enter Phone Number (e.g., 2547XXXXXXXX)"
+              pattern="2547[0-9]{8}"
+              required
+            />
+          </div>
+
+          <!-- Pay Button -->
+          <button
+            type="submit"
+            class="btn btn-success btn-block mt-3"
+            name="submit"
+            value="submit"
+          >
+            Pay Booking
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>

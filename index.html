@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chatbot.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
@@ -296,7 +297,7 @@
     <section class="footer-container">
         <div class="footer-content">
             <div class="footer-column">
-                <h3>RentUP</h3>
+                <h3>Caretaker</h3>
                 <p>Do You Need Help With Anything?</p>
                 <p>Receive updates, hot deals, tutorials, and discounts sent straight to your inbox every month.</p>
                 <div class="newsletter">
@@ -354,200 +355,9 @@
     </footer>
  
     <script src="index.js" defer></script>
-    Since there is no selected code, I will provide a general improvement to the HTML structure and add some accessibility features. Here's the modified code:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <meta name="description" content="Real Estate Website">
-    <meta name="keywords" content="Real Estate, Property, Homes">
-</head>
-<body>
-    <header class="navbar" role="banner">
-        <div class="logo">
-            <img src="images/new_logo.png" alt="Modern Home" width="100" height="100">
-        </div>
-        <nav role="navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="our_projects.html">Projects</a></li>
-                <li><a href="contacts.html">Contact</a></li>
-                <li><a href="service.html">Service</a></li>
-                <li><a href="auth.html">Login</a></li>
-                <li class="contact-number">📞 (+254) 792 530 210</li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="search-container" role="search">
-        <div class="search-wrapper">
-            <!-- Left Section: Search Filters -->
-            <div class="filter-section">
-                <h2>Discover the perfect property that fits your lifestyle.</h2>
-                <div class="filter-box">
-                    <div class="filter-options">
-                        <button id="statusAll" class="status-button" onclick="toggleStatus('all')">All Status</button>
-                        <button id="statusBuy" class="status-button active" onclick="toggleStatus('buy')">For Sale</button>
-                        <button id="statusRent" class="status-button" onclick="toggleStatus('rent')">Rent</button>
-                    </div>
-                    <div class="filter-options">
-                        <label for="city">Location:</label>
-                        <select id="city" aria-label="Select a city">
-                            <option>All Cities</option>
-                            <option>Kiambu</option>
-                            <option>Thika</option>
-                            <option>Kutus</option>
-                            <option>Kahawa West</option>
-                            <option>Kerugoya</option>
-                            <option>Embu</option>
-                            <option>Kimbo</option>
-                            <option>Roysambu</option>
-                            <option>Utawala</option>
-                        </select>
-    
-                        <label for="propertyTypeRent">Property Type:</label>
-                        <select id="propertyTypeRent" aria-label="Select a property type for rent">
-                            <option>House for Rent</option>
-                            <option>Apartment</option>
-                            <option>3 Bedroom</option>
-                            <option>2 Bedroom</option>
-                            <option>1 Bedroom</option>
-                            <option>Studio</option>
-                        </select>
-    
-                        <select id="propertyTypeSale" style="display: none;" aria-label="Select a property type for sale">
-                            <option>House for Sale</option>
-                            <option>Mansion</option>
-                            <option>4 Bedroom</option>
-                            <option>3 Bedroom</option>
-                        </select>
-    
-                        <label for="budget1">Budget:</label>
-                        <select id="budget1" aria-label="Select a budget for rent">
-                            <option>Any</option>
-                            <option>below 5000</option>
-                            <option>5001-10000</option>
-                            <option>10001-30000</option>
-                            <option>30001-50000</option>
-                            <option>50001-100000</option>
-                        </select>
-    
-                        <select id="budget2" style="display: none;" aria-label="Select a budget for sale">
-                            <option>Any</option>
-                            <option>Below 5 million</option>
-                            <option>5 million to 10 million</option>
-                            <option>11 million to 30 million</option>
-                            <option>31 million to 50 million</option>
-                            <option>51 million to 100 million</option>
-                        </select>
-    
-                        <button class="search-button" onclick="performSearch()">Go</button>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Right Section: Slideshow -->
-            <div class="slideshow-container">
-                <img src="images/property 1.png" alt="Property Image 1" class="slide active">
-                <img src="images/property 5.png" alt="Property Image 2" class="slide">
-                <img src="images/property 2.png" alt="Property Image 3" class="slide">
-                <img src="images/property 3.png" alt="Property Image 1" class="slide active">
-                <img src="images/property 4.png" alt="Property Image 2" class="slide">
-                <img src="images/property 7.png" alt="Property Image 3" class="slide">
-            </div>
-        </div>
-    </section>
-    <section class="hero-section" role="banner">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <p class="subheading">Property Listed</p>
-                <h1 class="heading">Recent Property – In the market?</h1>
-            </div>
-        </div>
-    </section>
-
-    <section class="property-section" role="main">
-        <h2 class="section-title">Featured Properties</h2>
-        <div class="property-container">
-            <!-- Property 1 -->
-            <div class="property-card">
-                <div class="property-image">
-                    <img src="images/listed 1.jpg" alt="Property Image">
-                    <span class="property-tag for-rent">For Rent</span>
-                </div>
-                <div class="property-details">
-                    <h3>Red Carpet Real Estate</h3>
-                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Kiambu</p>
-                </div>
-                <div class="property-footer">
-                    <div class="price-container">
-                        <span class="price">Ranges from 10000, to 100000, depending on house size</span> <span class="unit">/sqft</span>
-                    </div>
-                    <span class="property-type">Apartments</span>
-                </div>
-            </div>
-    
-            <!-- Property 2 -->
-            <div class="property-card">
-                <div class="property-image">
-                    <img src="images/listed 2.jpg" alt="Property Image">
-                    <span class="property-tag for-sale">For Rent</span>
-                </div>
-                <div class="property-details">
-                    <h3>Fairmount Properties</h3>
-                    <p class="property-location"><i class="fas fa-map-marker-alt"></i>Around Nairobi</p>
-                </div>
-                <div class="property-footer">
-                    <div class="price-container">
-                        <span class="price">Ranges from 10000, to 30000, depending on house size</span> <span class="unit">/sqft</span>
-                    </div>
-                    <span class="property-type">Studios</span>
-                </div>
-            </div>
-    
-            <!-- Property 3 -->
-            <div class="property-card">
-                <div class="property-image">
-                    <img src="images/listed 3.jpg" alt="Property Image">
-                    <span class="property-tag for-rent">For Rent</span>
-                </div>
-                <div class="property-details">
-                    <h3>The Real Estate Corner</h3>
-                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Embu</p>
-                </div>
-                <div class="property-footer">
-                    <div class="price-container">
-                        <span class="price">Ranges from 10000, to 100000, depending on house size</span> <span class="unit">/sqft</span>
-                    </div>
-                    <span class="property-type">1,2 and 3 bedrooms</span>
-                </div>
-            </div>
-    
-            <!-- Property 4 -->
-            <div class="property-card">
-                <div class="property-image">
-                    <img src="images/listed 4.jpg" alt="Property Image">
-                    <span class="property-tag for-sale">For Rent</span>
-                </div>
-                <div class="property-details">
-                    <h3>Luxury Hills Estate</h3>
-                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Nairobi</p>
-                </div>
-                <div class="property-footer">
-                    <div class="price-container">
-                        <span class="price">Ranges from 10000, to 100000, depending on house size</span> <span class="unit">/sqft</span>
-                    </div>
-                    <span class="property-type"> 2 and 3 bedrooms</span>
-                </div>
-            </div>
-    
-            <!-- Property 5
+    <script src="chatbot.js"></script>
+    <script src="whatsapp.js"></script>
 </body>
 </html>
+    
+
