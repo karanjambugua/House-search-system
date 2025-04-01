@@ -6,10 +6,88 @@ body {
     background-color: #f8f9fa;
     line-height: 1.6;
   }
-  
+/* Navbar Styles */
+.navbar {
+  background-color: #0c2e47; /* Dark blue background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px; /* Reduced padding to make it thinner */
+  height: 60px; /* Reduced height */
+  font-family: Arial, sans-serif;
+}
+
+/* Logo Section */
+.logo img {
+  width: 40px; /* Smaller logo */
+  height: auto;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  gap: 25px; /* Space between menu items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links li {
+  display: inline-block;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white; /* Correct color */
+  font-size: 14px; /* Reduced font size */
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.navbar-links li a:hover {
+  color: #f0a500; /* Orange hover effect */
+}
+
+/* Contact Section */
+.navbar-contact {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+/* Phone Icon */
+.navbar-contact i {
+  color: #ff4d4d; /* Red for the phone icon */
+  font-size: 14px; /* Smaller icon size */
+  margin-right: 5px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar-contact {
+    margin-top: 10px;
+  }
+}
+
   /* Hero Section */
   .hero-section {
-    background: url('images/dash1.jpg') no-repeat center center/cover;
+    background: url('images/confidense.jpg') no-repeat center center/cover;
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -151,5 +229,461 @@ body {
     .steps-container {
       grid-template-columns: 1fr;
     }
+  }
+  /* Styling for quick sale steps section */
+#quick-sale-steps {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Styling for the list */
+.sale-steps-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Styling for individual list items */
+.sale-steps-list li {
+  background-color: #fff;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-left: 5px solid #2e8b57;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for list items */
+.sale-steps-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Bold and green color for step titles */
+.sale-steps-list li strong {
+  color: #2e8b57;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Pro tip styling */
+.sale-tip {
+  background-color: #e9f7ef;
+  padding: 20px;
+  border-left: 5px solid #28a745;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.sale-tip h4 {
+  font-size: 18px;
+  color: #28a745;
+  margin-top: 0;
+}
+
+.sale-tip p {
+  font-size: 14px;
+  color: #333;
+}
+/* Styling for smooth sale steps section */
+#smooth-sale-steps {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Styling for the list */
+.smooth-sale-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Styling for individual list items */
+.smooth-sale-list li {
+  background-color: #fff;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-left: 5px solid #007bff; /* Blue border for smooth sale */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for list items */
+.smooth-sale-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Bold and blue color for step titles */
+.smooth-sale-list li strong {
+  color: #007bff;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Pro tip styling */
+.sale-tip {
+  background-color: #e9f7ef;
+  padding: 20px;
+  border-left: 5px solid #28a745;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.sale-tip h4 {
+  font-size: 18px;
+  color: #28a745;
+  margin-top: 0;
+}
+
+.sale-tip p {
+  font-size: 14px;
+  color: #333;
+}
+/* Styling for price home steps section */
+#price-home-steps {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Styling for the list */
+.price-home-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Styling for individual list items */
+.price-home-list li {
+  background-color: #fff;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-left: 5px solid #28a745; /* Green border for price tips */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for list items */
+.price-home-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Bold and green color for step titles */
+.price-home-list li strong {
+  color: #28a745;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Pro tip styling */
+.price-tip {
+  background-color: #e9f7ef;
+  padding: 20px;
+  border-left: 5px solid #28a745;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.price-tip h4 {
+  font-size: 18px;
+  color: #28a745;
+  margin-top: 0;
+}
+
+.price-tip p {
+  font-size: 14px;
+  color: #333;
+}
+/* Renovation tips container */
+#renovation-tips {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Styling for renovation sections */
+.renovation-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Renovation section style */
+.renovation-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #28a745; /* Green border for value additions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for renovation sections */
+.renovation-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Title style for renovation sections */
+.renovation-section h3 {
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+/* List styles for renovation tips */
+.renovation-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* Individual list items */
+.renovation-list li {
+  background-color: #f9f9f9;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border-left: 4px solid #28a745;
+  transition: all 0.3s ease;
+}
+
+/* Different border for avoid list */
+.avoid-list li {
+  border-left: 4px solid #dc3545;
+}
+
+/* List item hover effect */
+.renovation-list li:hover {
+  background-color: #f1f1f1;
+  transform: translateX(5px);
+}
+
+/* Bold titles for steps */
+.renovation-list li strong {
+  color: #28a745;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Tip section style */
+.renovation-tip {
+  background-color: #e9f7ef;
+  padding: 20px;
+  border-left: 5px solid #28a745;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.renovation-tip h4 {
+  font-size: 18px;
+  color: #28a745;
+  margin-top: 0;
+}
+
+.renovation-tip p {
+  font-size: 14px;
+  color: #333;
+}
+/* Property Marketing Section */
+#property-marketing {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Marketing list styling */
+.marketing-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Individual list items */
+.marketing-list li {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-left: 5px solid #007bff; /* Blue border for marketing steps */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for list items */
+.marketing-list li:hover {
+  background-color: #e9f5ff;
+  transform: translateY(-3px);
+}
+
+/* Bold titles for list items */
+.marketing-list li strong {
+  color: #007bff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Pro Tip Section */
+.marketing-tip {
+  background-color: #e9f5ff;
+  padding: 20px;
+  border-left: 5px solid #007bff;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.marketing-tip h4 {
+  font-size: 18px;
+  color: #007bff;
+  margin-top: 0;
+}
+
+.marketing-tip p {
+  font-size: 14px;
+  color: #333;
+}
+/* Override existing grid to show only 2 cards per row */
+.card-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* Force 2 cards per row */
+  gap: 20px !important;
+  padding: 20px !important;
+}
+
+/* Optional: Ensure 1 card per row for mobile screens */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr !important; /* 1 card per row on smaller screens */
+  }
+}
+/* Container for Closing Process */
+#closing-process {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px; /* Increased width */
+  width: 90%; /* Responsive width */
+}
+
+/* Section Heading */
+#closing-process h2 {
+  font-size: 1.8rem;
+  color: #2e8b57;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Closing List Styles */
+.closing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each List Item Styling */
+.closing-list li {
+  background-color: #fff;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-left: 5px solid #2e8b57;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.closing-list li:hover {
+  transform: translateX(5px);
+  background-color: #f1f8f5;
+}
+
+/* Strong text for emphasis */
+.closing-list li strong {
+  color: #2e8b57;
+}
+
+/* Pro Tip Section */
+.closing-tip {
+  background-color: #fff8e1;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #ffa500;
+}
+
+.closing-tip h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ff9800;
+}
+
+.closing-tip p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+* Dropdown Container */
+  .dropdown {
+    position: relative;
+  }
+  
+  /* Dropdown Button */
+  .dropdown-button {
+    color: #f9f9f9;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 12px;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 260px;
+    z-index: 1000;
+    padding: 15px 0;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  
+  /* Show Dropdown on Hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Dropdown Links */
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 14px;
+  }
+  
+  /* Hover Effect */
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0;
   }
   

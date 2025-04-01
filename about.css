@@ -241,3 +241,225 @@ body {
                 width: 100%;
             }
         }
+        /* Testimonial Section */
+#testimonial-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+    position: relative;
+    width: 70%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonial Slide */
+.testimonial-slide {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Active Slide */
+.testimonial-slide.active {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Testimonial Image */
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px auto;
+    border: 3px solid #fff;
+}
+
+/* Testimonial Name */
+.testimonial-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Testimonial Role */
+.testimonial-role {
+    font-size: 0.9rem;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Testimonial Controls */
+.testimonial-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Control Dots */
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #ffa500;
+}
+
+/* Slide Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f3f4f6;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    color: #fff;
+  }
+  
+  /* Testimonial Section */
+  .testimonial-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('images/testimonials.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container for all slides */
+  .testimonial-container {
+    position: relative;
+    width: 70%;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Individual Slide */
+  .testimonial-slide {
+    display: none;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .testimonial-slide.active {
+    display: block;
+  }
+  
+  /* Profile Picture */
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 4px solid #fff;
+  }
+  
+  .profile-pic img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Testimonial Content */
+  h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .title {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .quote {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 0 15px;
+  }
+  
+  /* Dots/Indicators */
+  .carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .dot.active {
+    background: #ff9800;
+  }
+  
+  /* Animation */
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
